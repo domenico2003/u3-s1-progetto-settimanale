@@ -6,7 +6,27 @@
   background-image: url("../assets/avatar.png");
   background-size: cover;
 }
+.img-carusel {
+  max-width: 100%;
 
+  height: 100%;
+  object-fit: cover;
+}
+
+.input-film {
+  background-color: #141414;
+  border-radius: 50px;
+  border: 1px solid white;
+  padding-inline: 20px;
+  color: white;
+}
+
+.loading-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #00000088;
+}
 footer {
   a {
     color: rgba(255, 255, 255, 0.5);
@@ -16,7 +36,8 @@ footer {
     max-width: 250px;
   }
 }
-.carousel-control-prev-icon {
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
   background-color: rgb(40, 40, 40);
   border-radius: 40px;
   padding: 30px;

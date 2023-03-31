@@ -44,7 +44,6 @@ class MyNav extends Component {
             </Nav>
           </Navbar.Collapse>
           <div className="d-flex align-items-center text-white-50 gap-4 ">
-            <i className="bi bi-search text-white fs-6 "></i>
             <p className="align-items-center text-white mb-0 fw-bold">KIDS</p>
             <i className="bi bi-bell-fill text-white fs-5 "></i>
             <Dropdown as={ButtonGroup} className="bg-prova mydrop">

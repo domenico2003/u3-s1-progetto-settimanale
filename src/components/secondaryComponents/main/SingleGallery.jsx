@@ -1,5 +1,5 @@
 import { Component } from "react";
-import { Carousel, Col, Row } from "react-bootstrap";
+import { Alert, Carousel, Col, Row } from "react-bootstrap";
 
 class SingleGallery extends Component {
   ImageCarousel = (imgForRow) => {
@@ -24,7 +24,7 @@ class SingleGallery extends Component {
         <article>
           <h4 class="mb-3 ">{this.props.name}</h4>
           <Carousel className="d-block d-sm-none">
-            {this.props.risp &&
+            {this.props.risp ? (
               this.ImageCarousel(1).map((row, index) => (
                 <Carousel.Item key={index}>
                   <Row>
@@ -33,16 +33,21 @@ class SingleGallery extends Component {
                         <img
                           src={obj.Poster}
                           alt={obj.imdbID}
-                          className="img-fluid"
+                          className="img-carusel"
                         />
                       </Col>
                     ))}
                   </Row>
                 </Carousel.Item>
-              ))}
+              ))
+            ) : (
+              <Alert variant="danger">
+                !film non trovato , inserisci il nome corretto
+              </Alert>
+            )}
           </Carousel>
           <Carousel className="d-none d-sm-block d-md-none">
-            {this.props.risp &&
+            {this.props.risp ? (
               this.ImageCarousel(2).map((row, index) => (
                 <Carousel.Item key={index}>
                   <Row>
@@ -51,16 +56,21 @@ class SingleGallery extends Component {
                         <img
                           src={obj.Poster}
                           alt={obj.imdbID}
-                          className="img-fluid"
+                          className="img-carusel"
                         />
                       </Col>
                     ))}
                   </Row>
                 </Carousel.Item>
-              ))}
+              ))
+            ) : (
+              <Alert variant="danger">
+                !film non trovato , inserisci il nome corretto
+              </Alert>
+            )}
           </Carousel>
           <Carousel className="d-none d-md-block d-xl-none">
-            {this.props.risp &&
+            {this.props.risp ? (
               this.ImageCarousel(4).map((row, index) => (
                 <Carousel.Item key={index}>
                   <Row>
@@ -69,16 +79,21 @@ class SingleGallery extends Component {
                         <img
                           src={obj.Poster}
                           alt={obj.imdbID}
-                          className="img-fluid"
+                          className="img-carusel"
                         />
                       </Col>
                     ))}
                   </Row>
                 </Carousel.Item>
-              ))}
+              ))
+            ) : (
+              <Alert variant="danger">
+                !film non trovato , inserisci il nome corretto
+              </Alert>
+            )}
           </Carousel>
           <Carousel className="d-none d-xl-block">
-            {this.props.risp &&
+            {this.props.risp ? (
               this.ImageCarousel(6).map((row, index) => (
                 <Carousel.Item key={index}>
                   <Row>
@@ -87,13 +102,18 @@ class SingleGallery extends Component {
                         <img
                           src={obj.Poster}
                           alt={obj.imdbID}
-                          className="img-fluid"
+                          className="img-carusel"
                         />
                       </Col>
                     ))}
                   </Row>
                 </Carousel.Item>
-              ))}
+              ))
+            ) : (
+              <Alert variant="danger">
+                !film non trovato , inserisci il nome corretto
+              </Alert>
+            )}
           </Carousel>
         </article>
       </>
@@ -102,23 +122,3 @@ class SingleGallery extends Component {
 }
 
 export default SingleGallery;
-
-{
-  /* <Row xs={2} md={4} xl={6} class="gx-1">
-          
-            {this.props.risp &&
-              this.props.risp.map((elemento) => {
-                console.log(elemento);
-                return (
-                  <Col>
-                    <img
-                      src={elemento.Poster}
-                      class="img-fluid"
-                      alt="img-esempio"
-                    />
-                  </Col>
-                );
-              })}
-          
-          </Row> */
-}
