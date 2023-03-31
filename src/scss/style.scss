@@ -1,0 +1,92 @@
+@import "./mybootstrap";
+
+.profilo {
+  height: 40px;
+  width: 40px;
+  background-image: url("../assets/avatar.png");
+  background-size: cover;
+}
+
+footer {
+  a {
+    color: rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+  }
+  .my-col {
+    max-width: 250px;
+  }
+}
+.carousel-control-prev-icon {
+  background-color: rgb(40, 40, 40);
+  border-radius: 40px;
+  padding: 30px;
+}
+
+.carousel-control-prev {
+  justify-content: flex-start;
+}
+.mydrop {
+  button {
+    background-color: #141414;
+    border: none;
+    border-radius: 0;
+    height: 100%;
+
+    &:hover {
+      background-color: #141414;
+    }
+  }
+
+  div {
+    background-color: black;
+    padding: 0;
+  }
+}
+body {
+  .nav-account {
+    background: linear-gradient(180deg, black, $netflix-bg-color);
+  }
+}
+.img {
+  display: block;
+  background-image: url("../assets/avatar.png");
+  width: 115px;
+  height: 115px;
+  background-size: cover;
+}
+
+.separatore {
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  margin-block: 20px;
+}
+
+.separatore-settings {
+  border-block: 2px solid rgba(21, 21, 21, 0.219);
+  margin-block: 20px;
+}
+
+.maturity {
+  width: max-content;
+}
+
+.word-space {
+  letter-spacing: 3px;
+}
+
+.word-space-1 {
+  letter-spacing: 1px;
+}
+
+.account-setting {
+  a {
+    text-decoration: none;
+  }
+}
+
+.hd {
+  height: 19px;
+  span {
+    position: relative;
+    top: -5px;
+  }
+}
